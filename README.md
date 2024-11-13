@@ -1,6 +1,6 @@
 # Landing-Yamz
 
-In this version of the website, I added a feature that allows the users to send their inquiries through the website. The way it works is that they will input their email and their feedback/inquiries/messages. After clickig the "Submit" button, an email is automatically sent to the email indicated in the code ("contact.js"), containing the message they typed in the text box in the website as well as the subject "Shop Inquiry".
+In this version of the website, I added a feature that allows the users to send their inquiries through the website. The way it works is that they will input their email and their feedback/inquiries/messages. After clicking the "Submit" button, an email is automatically sent to the email indicated in the code ("contact.js"), containing the message they typed in the text box in the website as well as the subject "Shop Inquiry".
 
 This is made possible through Node.js server and Nodemailer. In order to run this feature, follow the instructions below:
 
