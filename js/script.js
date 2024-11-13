@@ -1,6 +1,4 @@
 // script.js
-console.log("Hello, world!");
-
 document.getElementById('feedback-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     

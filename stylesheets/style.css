@@ -14,14 +14,14 @@
 	/* BREAK */
 
 
-
-	header{
+	header {
 		position: fixed;
 		left: 0; top: 0;
 		width: 100%;
 		z-index: 10;
 		padding: 40px 0;
 		transition:0.4s; -webkit-transition:0.4s;
+		
 	}
 	header .container{
 		display: flex;
@@ -31,14 +31,15 @@
 	}
 	header.fixed{
 		padding: 15px 0;
-		background: #fff;
+		background-color: rgba(255, 255, 255, 0.95);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 	}
 	header a.logo{
 		float: left;
 	}
 	header a.logo img{
 		float: left;
-		width: 230px;
+		width: 210px;
 	  height: auto;
 		margin: 0 0 0 45px;
 	}
@@ -58,7 +59,7 @@
 	.menu nav ul{float: left;}
 	.menu nav ul li{
 		float: left;
-		color: #000;
+		color: #4c1515;
 		font-size: 17px;
 		margin-right: 40px;
 		font-weight: bold;
@@ -67,11 +68,22 @@
 		margin-right: 0;
 	}
 	.menu nav ul li a{
-		color: #000;
+		color: #ffffff;
 		transition:0.4s; -webkit-transition:0.4s;
 		padding: 8px 25px;
 		border-radius:44px; -webkit-border-radius:44px;
 	}
+	/* Initial color at top (white) */
+	.menu nav ul li a {
+		color: #fff;
+		transition: color 0.4s;
+  	}
+  
+  	/* When scrolled, the color changes to black */
+  	header.scrolled .menu nav ul li a {
+		color: #000;
+  	}
+	
 	.menu nav ul li.active a{
 		background: rgb(52, 152, 219);
 		color: #fff;
@@ -86,6 +98,7 @@
 	.social a{
 		float: left;
 		margin: 0 10px 0 0;
+		margin-right: 29px;
 		text-align:left;
 		color: rgb(52, 152, 219);
 		font-size: 30px;
@@ -98,13 +111,35 @@
 
 
 
-	.banner{
-		float: left;
+	.banner {
+		position: relative;
 		width: 100%;
-		margin: 0 0 0 0;
+		height: 100vh;
 		padding: 140px 0 50px 0;
-		background: linear-gradient(to bottom, #ffffff, rgb(52, 152, 219));
+		overflow: hidden;
 	}
+
+	.background-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 1;
+		z-index: -1; /* Keeps video behind other content */
+	}
+
+	.video-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity here */
+		z-index: 0;
+	}
+
 	.banner-content{
 		float: center;
 		width: 100%; height: auto;
@@ -117,21 +152,24 @@
 	.banner-content .text{
 		float: left;
 		width: 100%;
-		padding: 0 200px 90px 200px;
+		padding: 0 50px 90px 50px;
 	}
 	.banner-content .text h3{
 		text-align:center;
-		color:#fff;
-		font-size:30px;
+		color:#ffffffeb;
+		font-size:65px;
+		padding-top: 50px;
 		font-weight:bold;
 		margin:0 0 40px 0;
+		font-family: "Galindo", sans-serif;
+		font-style: normal;
 	}
 	.banner-content .text h2{
 		text-align:center;
-		color:#fff;
-		font-size:70px;
+		color:#ffffffeb;
+		font-size:35px;
 		font-weight:bold;
-		margin:0 0 40px 0;
+		margin: -20px 0 40px 0;
 	}
 	.banner-content .text h4{
 		text-align:center;
@@ -162,15 +200,14 @@
 	/* BREAK */
 
 	.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Changed to flex-start for better alignment */
-    height: 70vh;
-    background: linear-gradient(to bottom, rgb(52, 152, 219), #ffffff);
-    margin: 0; /* No margin needed */
-    padding: 10px; /* Reduced padding */
-}
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: flex-start; /* Changed to flex-start for better alignment */
+    	height: 90vh;
+    	background: #112d60;    margin: 0; /* No margin needed */
+    	padding: 10px; /* Reduced padding */
+	}
 
 .about-container {
     text-align: center;
@@ -181,7 +218,7 @@
 .about-heading {
     font-size: 2.1em;
     font-weight: bold;
-    color: black;
+    color: white;
     letter-spacing: 1px;
 }
 
@@ -206,17 +243,18 @@
 .about-text {
     font-size: 14px;
     line-height: 1.6;
-    color: black;
+    color: white;
     flex: 1; /* Adjusted for better flexibility */
 }
 
 .about-image {
-    flex: 1.25; /* Adjusted for better flexibility */
+    flex: 35%; /* Adjusted for better flexibility */
+
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
+    height: 30vh;
     object-fit: cover;
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
@@ -228,7 +266,7 @@
 	.services-heading {
 		font-size: 2.1em;
     font-weight: bold;
-    color: black;
+    color: white;
     letter-spacing: 1px;
 	}
 
@@ -245,6 +283,7 @@
 	.services-container {
 		text-align: center;
 		padding: 40px 0 10px 0;
+		margin-bottom: 20px;
 	}
 
 	.underline2 {
@@ -259,7 +298,7 @@
 		float: left;
 		width: 100%;
 		padding: 50px 0 90px 0;
-		background: linear-gradient(to bottom, #ffffff, rgb(52, 152, 219) );
+		background: linear-gradient(to bottom, #112d60, #ffffff);
 	}
 
 .card-wrapper {
@@ -371,7 +410,7 @@
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, rgb(52, 152, 219), #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #112d60);
 }
 
 .contact-heading-container {
@@ -508,17 +547,18 @@
 		width: 100%; height: auto;
 		margin: 0 0 0 0;
 		padding: 50px 0 60px 0;
+		background-color: #112d60;
 	}
 	footer .copyright{
 		float: left;
 		text-align:left;
-		color:#000;
+		color:white;
 		font-size:20px;
 		margin:0 0 10px 0;
 	}
 	footer .copyright a{
-		color: #000;
-		border-bottom: 1px solid #000;
+		color: white;
+		border-bottom: 1px solid white;
 	}
 	footer .link{
 		float: right;
@@ -535,11 +575,11 @@
 	footer .link a.gotoup{
 		float: right;
 		margin-left: 20px;
-		background: #000;
+		background: #eee;
 		transition:0.4s; -webkit-transition:0.4s;
 		border-radius:34px; -webkit-border-radius:34px;
 		text-align:center;
-		color:#fff;
+		color:#000;
 		font-size:15px;
 		font-weight:normal;
 		margin:0 0 0 0;
@@ -549,8 +589,8 @@
 		margin-left: 8px;
 	}
 	footer .link a.gotoup:hover{
-		background: #eee;
-		color: #000;
+		background: #000;
+		color: #eee;
 	}
 
 	.modal {

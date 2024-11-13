@@ -15,7 +15,10 @@
 	<link rel="stylesheet" href="stylesheets/style-responsive.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
 </head>
 <body id="home">
 
@@ -28,7 +31,7 @@
 			
 
 			<a href="#home" class="logo">
-				<img src="images/YAMZ.png" alt="" />
+				<img src="images/YAMZ.png" alt=""/>
 			</a>
 
 
@@ -61,6 +64,11 @@
 
 
 	<section class="banner">
+		<video autoplay muted loop playsinline class="background-video">
+			<source src="images/circuit_background.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="video-overlay"> </div>
 		<div class="container">
 			<div class="banner-content">
 				
@@ -84,14 +92,17 @@
 
 			</div>
 		</div>
+
 	</section>
 	<!-- BANNER --> 
 
+	
+
 	<!---ABOUT HEADING--->
 	
-  <!---ABOUT--->
+  	<!---ABOUT--->
 	<section class="about" id="about">
-
+		<br> <br> <br>
 		<div class="about-container">
 			<h2 class="about-heading">About Us</h2>
 			<div class="underline1"></div>
@@ -116,13 +127,14 @@
 
 
 	<!-- SERVICES HEADING -->
-<div class="services-container" id="portfolio">
-	<h2 class="services-heading">We Offer These Services!</h2>
-	<div class="underline2"></div>
-</div>
+
 
 	<!-- SERVICES -->
 	<section class="portfolio" >
+		<div class="services-container" id="portfolio">
+			<h2 class="services-heading">We Offer These Services!</h2>
+			<div class="underline2"></div>
+		</div>
 		<div class="container swiper">
 			<div class="card-wrapper">
 				<ul class="card-list swiper-wrapper">
@@ -285,5 +297,6 @@
 	<script src="js/scripts.js"></script>
 	<script src="js/navigation.js"></script>
 	<script src="js/carousel.js"></script>
+	<script src="js/scroll-menu.js"></script>
 </body>
 </html>
