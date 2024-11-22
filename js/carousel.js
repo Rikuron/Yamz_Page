@@ -1,3 +1,4 @@
+// JavaScript for the card carousel on Services section
 new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 30,
@@ -28,6 +29,7 @@ new Swiper('.card-wrapper', {
   }
 });
 
+// JavaScript for the modal card opening on click
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalBody = document.getElementById("modal-body");

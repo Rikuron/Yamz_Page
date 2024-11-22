@@ -1,4 +1,5 @@
 // script.js
+// JavaScript for sending data to backend server to handle email
 document.getElementById('feedback-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     
