@@ -43,7 +43,12 @@ jQuery(document).ready(function($){
             $('[href="#portfolio"]').parent('li').removeClass('active');
         }
 
-
+        if ($('#products').isInViewport() && afterscroll) {
+            $('[href="#products"]').parent('li').siblings('li').removeClass('active');
+            $('[href="#products"]').parent('li').addClass('active');
+        }else{
+            $('[href="#products"]').parent('li').removeClass('active');
+        }
 
         if ($('#contact').isInViewport() && afterscroll) {
             $('[href="#contact"]').parent('li').siblings('li').removeClass('active');

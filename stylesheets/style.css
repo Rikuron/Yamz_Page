@@ -103,11 +103,6 @@ a.showmenu, a.hidemenu{
 	transition: color 0.4s;
 }
   
-/* When scrolled, the color changes to black */
-header.scrolled .menu nav ul li a {
-	color: #000;
-}
-	
 .menu nav ul li.active a{
 	background: rgb(52, 152, 219);
 	color: #fff;
@@ -243,7 +238,7 @@ header.scrolled .menu nav ul li a {
    	height: 90vh;
    	background: #112d60;   
 	margin: 0; /* No margin needed */
-   	padding: 10px; /* Reduced padding */
+   	padding: 0px; /* Reduced padding */
 }
 
 .scroll-container {
@@ -254,13 +249,9 @@ header.scrolled .menu nav ul li a {
     scroll-snap-type: x mandatory;
     height: 100%;
     width: 100%;
-    scroll-behavior: smooth;
-	scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
+	scrollbar-width: thin;
+	scrollbar-color: #1d2c84 rgba(0, 0, 0, 0.2);
 
-.scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
 }
 
 .scroll-section {
@@ -280,6 +271,27 @@ header.scrolled .menu nav ul li a {
     overflow: hidden; /* Prevent overflow */
 }
 
+.scroll-container::-webkit-scrollbar {
+    width: 12px; /* Scrollbar width */
+    height: 12px; /* Horizontal scrollbar height */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the track */
+    border-radius: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #4caf50; /* Scrollbar thumb color */
+    border-radius: 6px;
+    border: 2px solid transparent; /* Optional border around the thumb */
+    background-clip: content-box; /* Ensures a cleaner look with the border */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #388e3c; /* Darken on hover for interactivity */
+}
+
 .scroll-section-overlay {
 	position: absolute;
 	top: 0;
@@ -291,30 +303,31 @@ header.scrolled .menu nav ul li a {
 }
 
 .about-heading {
-	font-size: 2.5em;
+	font-size: 1.9em;
 	font-weight: bold;
 	color: white;
 	position: absolute;
 	top: 18%; /* Places it near the center vertically */
-	left: 5%; /* Moves it slightly to the left horizontally */
+	left: 8%; /* Moves it slightly to the left horizontally */
 	z-index: 2;
 }
 
 .underline1 {
-    width: 280px;
+    width: 240px;
     height: 6px;
     background: linear-gradient(to right, rgb(52, 152, 219), white);
     margin: 5px auto; /* Space below underline */
     border-radius: 10px;
+	margin-left: -20px;
 }
 
 .about-text {
 	width: 80%;
 	max-width: 325px;
 	color: white;
-	font-size: 19px;
+	font-size: 17px;
 	line-height: 1.6;
-	margin-top: -5px;	
+	margin-top: -20px;	
 	text-align: justify;
 	position: absolute;
 	top: 51%; /* Places it near the center vertically */
@@ -400,17 +413,17 @@ header.scrolled .menu nav ul li a {
 	color: white;
 	position: absolute;
 	top: 15%; /* Places it near the center vertically */
-	right: 18%; /* Moves it slightly to the left horizontally */
+	right: 19%; /* Moves it slightly to the right horizontally */
 	z-index: 2;
 }
 
-.underline4 {
-	width: 225px;
+.vision-heading .underline4 {
+	width: 200px;
 	height: 6px;
 	background: linear-gradient(to right, rgb(52, 152, 219), white);
 	margin: 5px auto; /* Space below underline */
 	border-radius: 10px;
-	margin-left: -33px;
+	margin-left: -26px;
 }
 
 .vision-text {
