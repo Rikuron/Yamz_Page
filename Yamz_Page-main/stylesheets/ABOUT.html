@@ -1,0 +1,162 @@
+<!-- Some Important Stuff here  -->
+<div class="header">
+  <div class="container">
+    <div class="slider">
+      <div class="testimonal" id="testimonal-1">
+        <div class="user-text">
+          <h3>ABOUT US</h3>
+          
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo dolorem possimus
+            delectus sint modi! Minima omnis exercitationem nemo ea.</p>
+        </div>
+        <div class="img">
+          <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" class="user">
+        </div>
+      </div>
+      <div class="testimonal" id="testimonal-2">
+        <div class="user-text">
+          <h3>Ipsum name</h3>
+          <div class="twitter"><small>@loremname <i class="fab fa-twitter"></i></small></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptates. Hic dolorum
+            aut reiciendis veritatis est magnam nihil veniam nemo.</p>
+        </div>
+        <div class="img">
+          <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" class="user">
+        </div>
+      </div>
+      <div class="testimonal" id="testimonal-3">
+        <div class="user-text">
+          <h3>Dolor name</h3>
+          <div class="twitter"><small>@loremname <i class="fab fa-twitter"></i></small></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo dolorem possimus
+            delectus sint modi! Minima omnis exercitationem nemo ea.</p>
+        </div>
+        <div class="img">
+          <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" class="user">
+        </div>
+      </div>
+      <div class="testimonal" id="testimonal-4">
+        <div class="user-text">
+          <h3>Sit name</h3>
+          <div class="twitter"><small>@loremname <i class="fab fa-twitter"></i></small></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo dolorem possimus
+            delectus sint modi! Minima omnis exercitationem nemo ea.</p>
+        </div>
+        <div class="img">
+          <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" class="user">
+        </div>
+      </div>
+      <div class="testimonal" id="testimonal-5">
+        <div class="user-text">
+          <h3>Amet name</h3>
+          <div class="twitter"><small>@loremname <i class="fab fa-twitter"></i></small></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo dolorem possimus
+            delectus sint modi! Minima omnis exercitationem nemo ea.</p>
+        </div>
+        <div class="img">
+          <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" class="user">
+        </div>
+      </div>
+    </div>
+    <div class="slider-btn">
+      <a href="#testimonal-1"><span class="dot"></span></a>
+      <a href="#testimonal-2"><span class="dot"></span></a>
+      <a href="#testimonal-3"><span class="dot"></span></a>
+      <a href="#testimonal-4"><span class="dot"></span></a>
+      <a href="#testimonal-5"><span class="dot"></span></a>
+    </div>
+  </div>
+</div>
+
+
+<style>
+/* WARNING : THIS CODE IS VERY MESSED UP, I MADE THIS WHEN I WAS A NOOB AT CODING, WILL BE MAKING A NEW CODEPEN MAKING THIS BUT IN A BETTER WAY */
+
+
+
+/* Some Important Stuff also here */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Raleway;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(70deg, purple, #ff5600);
+}
+.container {
+  width: 100;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  width: 550px;
+  overflow-x: hidden;
+  justify-content: space-between;
+  user-select: none;
+  cursor: default;
+}
+
+/* Dosent Work in FireFox, but has overflow: hidden; so It works! :) */
+.slider::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.testimonal {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  align-items: center;
+  justify-content: space-around;
+}
+.user {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.img {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.user-text {
+  width: 300px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.slider-btn {
+  background: rgba(0, 0, 0, 0.5);
+  width: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 13px;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
